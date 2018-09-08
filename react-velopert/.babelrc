@@ -1,0 +1,8 @@
+{
+  "presets": ["@babel/react", "@babel/env"],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "transform-es2015-arrow-functions",
+    "transform-class-properties"
+  ]
+}
