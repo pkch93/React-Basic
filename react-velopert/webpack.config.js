@@ -7,6 +7,7 @@ module.exports={
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist")
   },
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -27,11 +28,13 @@ module.exports={
   },
   plugins:[
     new HtmlWebpackPlugin({
+      title: "react-velopert",
       template: "./index.html"
     })
   ],
   devServer: {
-    publicPath: "/dist/",
+    contentBase: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     port: 9000
   }
 }

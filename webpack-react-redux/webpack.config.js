@@ -1,12 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Webpack = require("webpack");
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
